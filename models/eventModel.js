@@ -21,19 +21,13 @@ const eventSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: function newDate() {
-      const date = new Date();
-      date.setUTCHours(-3);
-
-      const day = date.getDate();
+      let date = new Date();
+      date.setUTCHours(date.getHours());
       return date;
     },
-    // required: [
-    //   true,
-    //   'An event must have the date when it was created, please type it!',
-    // ],
   },
 });
 
-const User = mongoose.model('User', eventSchema);
+const Event = mongoose.model('Event', eventSchema);
 
-module.exports = User;
+module.exports = Event;
