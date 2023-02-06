@@ -33,7 +33,7 @@ exports.signIn = async (req, res) => {
 
     if (userPassword !== password) return res.send('The password is wrong!');
     res.status(200).json({
-      message: 'this is your user!',
+      message: 'that is your user!',
       data: {
         User: user,
       },
