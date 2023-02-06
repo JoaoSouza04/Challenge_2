@@ -24,7 +24,7 @@ mongoose
   });
 
 app.post('/api/v1', eventController.createEvent);
-app.get('/api/v1', eventController.getEvents);
+app.get('/api/v1', eventController.getAllEvents);
 app.get('/api/v1/events/:id', eventController.getEventById);
 app.put('/api/v1/events/:id', eventController.updateEvent);
 app.delete('/api/v1/event/:id', eventController.deleteEvent);
