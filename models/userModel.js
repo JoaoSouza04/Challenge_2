@@ -33,6 +33,7 @@ const userSchema = new mongoose.Schema({
     type: Number,
     required: [true, 'you must have to enter your password!'],
     minlength: 8,
+    select: false,
   },
   passwordConfirm: {
     type: Number,
@@ -43,6 +44,7 @@ const userSchema = new mongoose.Schema({
       },
       message: `Passwords aren't equal!`,
     },
+    select: false,
   },
 });
 
