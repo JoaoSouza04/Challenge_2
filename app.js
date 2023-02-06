@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const express = require('express');
 const dotenv = require('dotenv');
 const app = express();
-const eventController = require('./controllers/event.Controller.js');
+const eventController = require('./controllers/eventController.js');
+const userController = require('./controllers/userController.js');
 const { Router } = require('express');
 app.use(express.json());
 
@@ -23,11 +24,16 @@ mongoose
     console.log('Database successfully connected!');
   });
 
+//events
 app.post('/api/v1', eventController.createEvent);
 app.get('/api/v1', eventController.getAllEvents);
 app.get('/api/v1/events/:id', eventController.getEventById);
 app.put('/api/v1/events/:id', eventController.updateEvent);
 app.delete('/api/v1/event/:id', eventController.deleteEvent);
+
+//users
+app.post('/users/signUp', userController.signUp);
+app.get('/users/signIn', userController.signIn);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
