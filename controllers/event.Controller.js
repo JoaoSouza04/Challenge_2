@@ -22,8 +22,14 @@ exports.createEvent = async (req, res) => {
   }
 };
 
-exports.getEvents = async (req, res) => {
+exports.getAllEvents = async (req, res) => {
   try {
+    // const queryObj = { ...req.query };
+    // const excludedFields = ['page', 'sort', 'limit', 'fields'];
+    // excludedFields.forEach((el) => delete queryObj[el]);
+
+    // const query = Event.find
+
     const events = await Event.find();
 
     res.status(200).json({
@@ -46,9 +52,7 @@ exports.getEventById = async (req, res) => {
         message: 'Please type the id of an event!',
       });
 
-    const id = req.params.id;
-
-    eventFind = await Event.findById(id);
+    eventFind = await Event.findById(req.params.id);
 
     res.status(302).json({
       message: `That´s the event found!`,
