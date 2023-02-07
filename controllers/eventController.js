@@ -74,7 +74,7 @@ exports.updateEvent = async (req, res) => {
         message: 'Please type the id or the update content for an event!',
       });
 
-    const eventFind = await Event.findByIdAndUpdate(req.params.id, req.body, {
+    const eventFound = await Event.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true,
     });
@@ -82,7 +82,7 @@ exports.updateEvent = async (req, res) => {
     res.status(200).json({
       message: 'Event updated!',
       data: {
-        Event: eventFind,
+        Event: eventFound,
       },
     });
   } catch (err) {
