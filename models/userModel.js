@@ -13,6 +13,7 @@ const userSchema = new mongoose.Schema({
   birthDate: {
     type: Date,
     required: [true, 'Please type your birth date!'],
+    min: '1910-01-01',
   },
   city: {
     type: String,
@@ -32,8 +33,6 @@ const userSchema = new mongoose.Schema({
   password: {
     type: Number,
     required: [true, 'you must have to enter your password!'],
-    minlength: 8,
-    select: false,
   },
   passwordConfirm: {
     type: Number,
@@ -44,7 +43,6 @@ const userSchema = new mongoose.Schema({
       },
       message: `Passwords aren't equal!`,
     },
-    select: false,
   },
 });
 
