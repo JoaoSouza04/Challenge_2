@@ -5,7 +5,7 @@ const eventSchema = new mongoose.Schema({
     type: String,
     required: [true, 'An event must have a description, please type it'],
     maxlength: 300,
-    minleangth: 3,
+    minlength: 3,
     trim: true,
   },
   userId: {
@@ -13,10 +13,17 @@ const eventSchema = new mongoose.Schema({
     required: [true, 'An event must have an id, please type it!'],
     unique: true,
     trim: true,
+    minlength: 8,
   },
   dateTime: {
     type: Date,
     required: [true, 'An event must have an date, please type it!'],
+    min: function date() {
+      let date = new Date();
+      date.setUTCDate(date.getDate());
+      date.setUTCHours(date.getHours());
+      return date;
+    },
   },
   createdAt: {
     type: Date,
@@ -25,6 +32,14 @@ const eventSchema = new mongoose.Schema({
       date.setUTCHours(date.getHours());
       return date;
     },
+  },
+  day: {
+    type: Number,
+    default: function day() {
+      let date = new Date(this.dateTime);
+      return date.getUTCDate();
+    },
+    select: false,
   },
 });
 
