@@ -6,7 +6,7 @@
 
 # **Passos para a utilização da API:**
 
-Primeiramente, utlizando o terminal você deverá utilizar alguns comandos, o primeiro deles é: `git clone https://github.com/JoaoSouza04/Challenge_2.git` para clonar este repositório em sua máquina! Após isso, se direcione para esse repositório utilizando o comando `cd caminhoParaRepositório` e substitua o campo "caminhoParaRepositório" pelo caminho até a pasta da API. Quando ja estiver na pasta do repositório, Também será necessário rodar os seguintes comandos no terminal: `npm inity -y`, `npm i Express`, `npm i mongoose`, `npm i nodemon`, `npm i dotenv`.
+Primeiramente, utlizando o terminal você deverá utilizar alguns comandos, o primeiro deles é: `git clone https://github.com/JoaoSouza04/Challenge_2.git` para clonar este repositório em sua máquina! Após isso, se direcione para esse repositório utilizando o comando `cd caminhoParaRepositório` e substitua o campo "caminhoParaRepositório" pelo caminho até a pasta da API. Quando ja estiver na pasta do repositório, Também será necessário rodar os seguintes comandos no terminal: `npm init -y`, `npm i Express`, `npm i mongoose`, `npm i nodemon`, `npm i dotenv`.
 
 **Comandos para executar a API:** Nesta API, você poderá utilizar o comando `npm start` para rodar o arquivo principal, e se caso desejar fazer alguma alteração no código e testar, poderá utilizar o comando `npm run dev` para rodar a aplicação após salvar qualquer alteração!
 
@@ -18,8 +18,8 @@ _POST_
 
 createEvent: Nesta rota, o padrão esperado do usuário é que seja inserido um texto de descrição com no mínimo 3 caracteres e no máximo 300, um texto para id de usuário com no mínimo 8 caracteres que também deve ser único. Para as datas, é necessário inserir a data do evento, que deve ser "maior ou igual" a data do dia atual.
 
-**IMPORTANTE**
-A data deve ser passada com um formato específico, caso contrário, o sistema não funcionará de forma correta. o formato deve ser 'yyyy-MM-ddTHH:mm:ss' sendo yyyyy o ano, MM o mês, dd o dia, T um separador para o início da inserção das horas, HH as horas, mm minutos, ss segundos e por fim o Z para sinalizar o UTC. Vale ressaltar que é possível inserir apenas a data ou somente a data com as horas e etc, porém se faz necessário sempre ao fim da declaração da data, digitar o Z. Ex: 'yyyy-MM-ddZ' ou 'yyyy-MM-ddTHHZ'.
+**IMPORTANTE:**
+A data deve ser passada com um formato específico, caso contrário, o sistema não funcionará de forma correta. o formato deve ser 'yyyy-MM-ddTHH:mm:ss' sendo yyyyy o ano, MM o mês, dd o dia, T um separador para o início da inserção das horas, HH as horas, mm minutos, ss segundos e por fim o Z para sinalizar o UTC, este caractere é obrigatório!. Vale ressaltar que é possível inserir apenas a data ou somente a data com as horas e etc, porém se faz necessário sempre ao fim da declaração da data, digitar o Z. Ex: 'yyyy-MM-ddZ' ou 'yyyy-MM-ddTHHZ'.
 
 **URL e Exemplo de parâmetros para request de criação de eventos:**
 
