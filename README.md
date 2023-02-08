@@ -6,7 +6,7 @@
 
 # **Passos para a utilização da API:**
 
-Primeiramente, utlizando o terminal você deverá utilizar alguns comandos, o primeiro deles é: `git clone https://github.com/JoaoSouza04/Challenge_2.git` para clonar este repositório em sua máquina! Após isso, se direcione para esse repositório utilizando o comando `cd caminhoParaRepositório` e substitua o campo "caminhoParaRepositório" pelo caminho até a pasta da API. Quando ja estiver na pasta do repositório, Também será necessário rodar os seguintes comandos no terminal: `npm init -y`, `npm i Express`, `npm i mongoose`, `npm i nodemon`, `npm i dotenv`.
+Primeiramente, utlizando o terminal você deverá utilizar alguns comandos, o primeiro deles é: `git clone https://github.com/JoaoSouza04/Challenge_2.git` para clonar este repositório em sua máquina! Após isso, se direcione para esse repositório utilizando o comando `cd caminhoParaRepositório` e substitua o campo "caminhoParaRepositório" pelo caminho até a pasta da API. Quando ja estiver na pasta do repositório, Também será necessário rodar o seguinte comando: `npm install`.
 
 **Comandos para executar a API:** Nesta API, você poderá utilizar o comando `npm start` para rodar o arquivo principal, e se caso desejar fazer alguma alteração no código e testar, poderá utilizar o comando `npm run dev` para rodar a aplicação após salvar qualquer alteração!
 
