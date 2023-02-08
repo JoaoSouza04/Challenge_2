@@ -24,16 +24,15 @@ mongoose
     console.log('Database successfully connected!');
   });
 
-//events
 app.post('/api/v1', eventController.createEvent);
 app.get('/api/v1', eventController.getAllEvents);
 app.get('/api/v1/events/:id', eventController.getEventById);
 app.put('/api/v1/events/:id', eventController.updateEvent);
 app.delete('/api/v1/event/:id', eventController.deleteEvent);
 
-//users
 app.post('/users/signUp', userController.signUp);
 app.get('/users/signIn', userController.signIn);
+app.put('/users/:id', userController.updateUser);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
